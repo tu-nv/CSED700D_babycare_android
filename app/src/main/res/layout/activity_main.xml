@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_energy_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Energy usage is:"
+        app:layout_constraintBottom_toTopOf="@+id/rad_sound_selection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_monitor_energy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Energy Monitoring"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnCryDetection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Start BabyCare"
+        app:layout_constraintBottom_toTopOf="@+id/btn_monitor_energy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rad_sound_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCryDetection"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/rad_btn_lulaby_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lulaby 1" />
+
+        <RadioButton
+            android:id="@+id/rad_btn_lulaby_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lulaby 2" />
+
+        <RadioButton
+            android:id="@+id/rad_btn_noise_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="White Noise 1" />
+
+        <RadioButton
+            android:id="@+id/rad_btn_noise_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="White Noise 2" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rad_soothing_mode_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rad_sound_selection">
+
+        <RadioButton
+            android:id="@+id/rad_btn_play_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play Sound" />
+
+        <RadioButton
+            android:id="@+id/rad_btn_play_toy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play Toy" />
+
+        <RadioButton
+            android:id="@+id/rad_btn_play_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Auto" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
